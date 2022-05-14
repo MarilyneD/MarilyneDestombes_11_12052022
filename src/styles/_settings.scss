@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/static/Montserrat-Regular.ttf);
+}
+
+$font-1: "font-1", sans-serif;
+
+$color-1: #FF6060;
+
+$color-2: #FFFFFF;
+
+$color-3: #282c34;
+$white: rgb(243, 243, 243);
+
+$width-home : 1240px;
+
+
+
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display : flex;
+  flex-direction : row;
+  width : $width-home;
+  margin-left : auto;
+  margin-right :auto;
+  font-family: $font-1;
+ }
+li {
+  list-style-type: none;
+}

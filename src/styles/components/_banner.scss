@@ -1,0 +1,27 @@
+#banner {
+    @include verticalCenter;
+    display : flex;
+    width: $width-home;
+    height : 223px;
+    border-radius: 25px;
+    //opacity: 0.3;
+    background: rgba(0, 0, 0, 0.3) url(../../assets/img/banner_home.png) center/cover;
+    background-blend-mode:darken ;
+    
+  h1{
+    display: flex;
+    color:$color-2 ;
+    position: absolute;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 48px;
+line-height: 142.6%;
+
+
+
+}
+    
+  }
+  
