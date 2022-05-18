@@ -3,10 +3,10 @@ import React, { useEffect, useState } from 'react';
 import Card from './Card';
 
 const Rentals = () => {
-    const[data, setData] = useState([])
-useEffect(()=>{
-    axios.get("./data/logements.json").then((res) => setData(res.data))
-},[])
+    const [data, setData] = useState([])
+    useEffect(()=>{
+        axios.get("./data/logements.json").then((res) => setData(res.data))
+    },[])
     
 
     return (

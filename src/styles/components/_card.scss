@@ -7,36 +7,38 @@
   border-radius: 10px;
   transition: 0.3s;
 
-  
+
 
   &:hover {
     transform: scale(1.05);
     z-index: 2;
   }
 
-  
+
   h2 {
     position: absolute;
     top: 290px;
     //bottom : 55px;
     left: 10px;
-    color: $white;
+    color: #FFFFFF;
     width: 340px;
     display: grid;
+    font-family: $font-2;
     font-size: 18px;
     //justify-content: center;
-  
-    
-   
+
+
+
   }
+
   img {
-    
-    mix-blend-mode:darken ;
+
+    mix-blend-mode: darken;
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
-    
-  
+
+
   }
 }

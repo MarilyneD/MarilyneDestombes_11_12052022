@@ -1,19 +1,27 @@
 .navigation {
-  display: flex;
-  flex-direction: row;
+  font-weight: 500;
+  font-size: 24px;
+
+
+
+
+
   ul {
     display: flex;
+    flex-direction: row;
     margin: 30px;
+    column-gap: 50px;
+
 
     a {
       text-decoration: none;
       padding: 10px;
 
       li {
+        font-family: $font-2;
         color: $color-1;
         transition: 0.2s;
         cursor: pointer;
-
       }
     }
 
@@ -22,12 +30,12 @@
 
       &::after {
         content: "";
-        height: 4px;
+        height: 2px;
         width: 0;
         background: $color-1;
         position: absolute;
         border-radius: 10px;
-        bottom: 0px;
+        bottom: 5px;
         left: 50%;
         transform: translateX(-50%);
         -webkit-animation: anim 0.3s ease forwards;
@@ -38,6 +46,7 @@
             width: 100%;
           }
         }
+
         @keyframes anim {
           to {
             width: 100%;
