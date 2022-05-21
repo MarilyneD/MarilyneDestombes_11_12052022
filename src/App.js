@@ -8,6 +8,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -15,9 +16,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/lodging" element={<Lodging />} />
+        <Route path="/lodging/:id" element={<Lodging />} />
         {/* path="*" erreur 404, fonctionne si jamais l'url ne correspond à rien de déclaré au dessus */}
         <Route path="*" element={<Notfound />} />
+
       </Routes>
       <Footer />
     </BrowserRouter>

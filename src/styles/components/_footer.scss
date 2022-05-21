@@ -1,7 +1,8 @@
 .footer {
     display: flex;
-    //position : absolute;
-    //bottom: 209px;
+    position: absolute;
+    top: 100%;
+    bottom: 0;
     flex-direction: column;
     row-gap: 40px;
     bottom: 0px;
@@ -12,4 +13,5 @@
     padding-top: 40px;
     font-family: $font-2;
     font-size: 24px;
+    width: 100%;
 }
