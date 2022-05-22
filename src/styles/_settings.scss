@@ -31,11 +31,10 @@ $color-3: #282c34;
 
 $color-4:#F7F7F7;
 
-
-
-
-
 $width-home : 1240px;
+@media screen and (max-width: 1240px) {$width-home : 1000px;}
+
+
 
 
 
@@ -67,4 +66,24 @@ li {
 #root {
   width: $width-home;
   position: relative;
+}
+
+@media screen and (max-width: 1240px) {body{width: 900px;} 
+
+#root {
+  width: 900px;
+  
+}
+
+}
+
+
+@media screen and (max-width: 920px) {body{width: 95%;} 
+
+#root {
+  width: 95%;
+  margin-left: 2.5%;
+  
+}
+
 }

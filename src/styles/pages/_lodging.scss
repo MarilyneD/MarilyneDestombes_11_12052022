@@ -6,7 +6,6 @@
 
 .lightbox {
     border-radius: 25px;
-    height: 415 px;
     max-height: 415px;
 }
 
@@ -28,9 +27,6 @@
     font-weight: 500;
     font-size: 36px;
     line-height: 51px;
-
-    //align-items: flex-end;
-
     color: #FF6060;
 
     .title__location {
@@ -49,9 +45,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    line-height: 142.6%;
-
-    /* or 26px */
+    line-height: 24px;
     display: flex;
     align-items: flex-end;
     text-align: right;
@@ -105,3 +99,14 @@
     width: 100%;
 
 }
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    
+    .title__title{font-size: 26px ;}
+    .title__location{font-size: 14px;}
+    
+    .description-equipment{flex-direction: column;row-gap: 30px;}}

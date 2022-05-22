@@ -18,7 +18,7 @@ const Lodging = () => {
   function stars() {
     {
       for (let i = 1; i < 6; i++) {
-        <img className="lightbox" src={rental[0].pictures[0]} alt="" />;
+        <img key={i} className="star" src='./img/star-red.svg' alt={i} />;
       }
     }
   }
@@ -51,7 +51,7 @@ const Lodging = () => {
             <div className="tag">{tag}</div>
           ))}
         </div>
-        <div className="rating"></div>
+        {/* <div className="rating">{stars()}</div> */}
       </section>
       <section className="description-equipment">
         <div
