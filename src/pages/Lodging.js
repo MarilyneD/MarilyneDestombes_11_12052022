@@ -15,13 +15,13 @@ const Lodging = () => {
   console.log("data", data);
   let rental = data.filter((rental) => rental.id === id);
 
-  function stars() {
-    {
-      for (let i = 1; i < 6; i++) {
-        <img key={i} className="star" src='./img/star-red.svg' alt={i} />;
-      }
-    }
-  }
+  // function stars() {
+  //   {
+  //     for (let i = 1; i < 6; i++) {
+  //       <img key={i} className="star" src='./img/star-red.svg' alt={i} />;
+  //     }
+  //   }
+  // }""
 
   if (data.length === 0) {
     return <p>Chargement des data...</p>;
@@ -38,17 +38,18 @@ const Lodging = () => {
         <div className="title__host">
           <div className="title__host__name">
             {rental[0].host.name}
-            <img
+            
+          </div>
+          <img 
               src={rental[0].host.picture}
               alt="photo de profil de l'hébergeur"
             />
-          </div>
         </div>
       </div>
       <section className="tags-rating">
         <div className="tags">
           {rental[0].tags.map((tag) => (
-            <div className="tag">{tag}</div>
+            <div key={tag} className="tag">{tag}</div>
           ))}
         </div>
         {/* <div className="rating">{stars()}</div> */}
@@ -71,7 +72,7 @@ const Lodging = () => {
           <div className="dropdown__content">
             <ul>
               {rental[0].equipments.map((equipment) => (
-                <li>{equipment}</li>
+                <li key={equipment}>{equipment}</li>
               ))}
             </ul>
           </div>

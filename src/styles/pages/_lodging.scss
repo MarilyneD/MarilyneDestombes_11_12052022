@@ -19,15 +19,14 @@
 
 .title__title {
     position: relative;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
+    font-family: $font-2;
     font-size: 36px;
     line-height: 51px;
-    color: #FF6060;
+    color: $color-1;
 
     .title__location {
         display: flex;
@@ -40,17 +39,22 @@
 
 .title__host {
     position: relative;
-
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
+    font-family: $font-2;
     font-size: 18px;
     line-height: 24px;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     text-align: right;
-
     color: #FF6060;
+
+    &__name{
+        width: 80px;
+        padding-top: 10px;
+        margin-right: 20px;
+        
+        
+
+    }
 
 
     img {
@@ -72,14 +76,15 @@
     .tags {
         display: flex;
         column-gap: 20px;
-
+        font-family: $font-2;
+        font-size: 14px;
         color: #fff;
 
 
         .tag {
             background-color: $color-1;
             border-radius: 10px;
-            width: 115px;
+            padding: 0 25px 0 25px;
             height: 25px;
             @include verticalCenter;
         }
@@ -92,6 +97,8 @@
     display: flex;
     flex-direction: row;
     display: flex;
+    font-family: $font-1;
+    font-size: 18px;
     padding-top: 30px;
     padding-bottom: 30px;
     column-gap: 30px;

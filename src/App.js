@@ -19,7 +19,6 @@ const App = () => {
         <Route path="/lodging/:id" element={<Lodging />} />
         {/* path="*" erreur 404, fonctionne si jamais l'url ne correspond à rien de déclaré au dessus */}
         <Route path="*" element={<Notfound />} />
-
       </Routes>
       <Footer />
     </BrowserRouter>

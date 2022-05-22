@@ -9,14 +9,15 @@ const Rentals = () => {
   }, []);
 
   return (
-    <div className="rentals">
+    <section className="rentals">
       <ul>
         {data.map((rental) => (
-          <Card key={rental.id} rental={rental} />
+          <Card key={rental.id} rentalprops={rental} />
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 
 export default Rentals;
+

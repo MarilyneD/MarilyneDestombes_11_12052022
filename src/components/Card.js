@@ -1,12 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Card = ({ rental }) => {
+const Card = ({ rentalprops }) => {
   return (
     <li className="card">
-      <NavLink to={"/Lodging/" + rental.id} property={rental}>
-        <img src={rental.pictures[0]} alt={"image de " + rental.title} />
-        <h2>{rental.title}</h2>
+      <NavLink to={"/Lodging/" + rentalprops.id} >
+        <img src={rentalprops.pictures[0]} alt={"image de " + rentalprops.title} />
+        <h2>{rentalprops.title}</h2>
       </NavLink>
     </li>
   );
