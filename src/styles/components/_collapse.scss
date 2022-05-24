@@ -1,9 +1,7 @@
-.dropdown {
+.collapse {
   position: relative;
   display: flex;
   width: 100%;
-  //width :$width-home;
-  //max-width: calc($width-home*0.82);
 
   &__title {
     position: absolute;
@@ -45,7 +43,7 @@
       background-image: url(../../assets/img/arrow-bottom.svg);
       background-repeat: no-repeat;
       background-position: center;
-      transform: rotate(180deg);
+      transform: rotate(180deg);//au début la flèche est vers le haut, donc à 180 degrés du bottom
       transition: transform .3s ease-in-out;
     }
   }
@@ -73,7 +71,7 @@
   &--expanded {
 
 
-    .dropdown {
+    .collapse {
       &__title {
         &::after {
           transform: rotate(360deg);
@@ -89,12 +87,12 @@
 }
 
 
-@media screen and (max-width: 920px) {.dropdown__title{ font-size:20px ;}}
+@media screen and (max-width: 920px) {.collapse__title{ font-size:20px ;}}
 
 
-@media screen and (max-width: 600px) {.dropdown__title{height: 36px; font-size:16px ;}
+@media screen and (max-width: 600px) {.collapse__title{height: 36px; font-size:16px ;}
 
-.dropdown__title::after{height: 36px;}
-.dropdown__content {max-height: 36px;padding-top: 10px;}}
+.collapse__title::after{height: 36px;}
+.collapse__content {max-height: 36px;padding-top: 10px;}}
 
-//.dropdown--expanded .footer{position : absolute; bottom: 209px;}
+//.collapse--expanded .footer{position : absolute; bottom: 209px;}

@@ -1,64 +1,49 @@
 import React, { useState } from "react";
 import BannerAbout from "../components/BannerAbout";
+import Collapse from "../components/Collapse";
 
 const About = () => {
-  let [isExpanded1, setIsExpanded1] = useState(false);
-  let [isExpanded2, setIsExpanded2] = useState(false);
-  let [isExpanded3, setIsExpanded3] = useState(false);
-  let [isExpanded4, setIsExpanded4] = useState(false);
 
   return (
     <div className="about">
       <BannerAbout />
-      <section className="about-dropdown">
-        <div
-          className={isExpanded1 ? "dropdown dropdown--expanded" : "dropdown"}
-          onClick={() => setIsExpanded1(!isExpanded1)}
-        >
-          <h2 className="dropdown__title">Fiabilité</h2>
-          <div className="dropdown__content">
+      <section className="about-collapse">
+        <Collapse
+          title="Fiabilité"
+          text={
             <p>
               Les annonces postées sur Kasa garantissent une fiabilité totale.
               Les photos sont conformes aux logements, et toutes les
               informations sont régulièrement vérifiées par nos équipes.
             </p>
-          </div>
-        </div>
+          }
+        />
 
-        <div
-          className={isExpanded2 ? "dropdown dropdown--expanded" : "dropdown"}
-          onClick={() => setIsExpanded2(!isExpanded2)}
-        >
-          <h2 className="dropdown__title">Respect</h2>
-          <div className="dropdown__content">
+        <Collapse
+          title="Respect"
+          text={
             <p>
               La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
               comportement discriminatoire ou de perturbation du voisinage
               entraînera une exclusion de notre plateforme.
             </p>
-          </div>
-        </div>
+          }
+        />
 
-        <div
-          className={isExpanded3 ? "dropdown dropdown--expanded" : "dropdown"}
-          onClick={() => setIsExpanded3(!isExpanded3)}
-        >
-          <h2 className="dropdown__title">Service</h2>
-          <div className="dropdown__content">
+        <Collapse
+          title="Service"
+          text={
             <p>
               Nos équipes se tiennent à votre disposition pour vous fournir une
               expérience parfaite. N'hésitez pas à nous contacter si vous avez
               la moindre question.
             </p>
-          </div>
-        </div>
+          }
+        />
 
-        <div
-          className={isExpanded4 ? "dropdown dropdown--expanded" : "dropdown"}
-          onClick={() => setIsExpanded4(!isExpanded4)}
-        >
-          <h2 className="dropdown__title">Responsabilité</h2>
-          <div className="dropdown__content">
+        <Collapse
+          title="Responsabilité"
+          text={
             <p>
               La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
               pour les voyageurs, chaque logement correspond aux critères de
@@ -67,8 +52,8 @@ const About = () => {
               que les standards sont bien respectés. Nous organisons également
               des ateliers sur la sécurité domestique pour nos hôtes.
             </p>
-          </div>
-        </div>
+          }
+        />
       </section>
     </div>
   );
