@@ -4,13 +4,6 @@
 }
 
 
-.lightbox {
-    object-fit: cover;
-    border-radius: 25px;
-    max-height: 415px;
-}
-
-
 
 .title {
     display: flex;
@@ -113,8 +106,10 @@
 
 
 @media screen and (max-width: 600px) {
-    
-    .title__title{font-size: 26px ;}
+    .title{padding-top: 0;height : 70px;}
+    .title__title{font-size: 26px ;width : 300px;line-height: 30px;flex-shrink: 0;}
     .title__location{font-size: 14px;}
+    .title__host{position :relative; top : 130px;left : -5px; font-size:16px ;img{height : 40px; width : 40px; top :15px;left: -10px;}}
+
     
-    .description-equipment{flex-direction: column;row-gap: 30px;}}
+    .description-equipment{padding-top: 85px; flex-direction: column;row-gap: 30px;}}

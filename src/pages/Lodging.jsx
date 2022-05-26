@@ -2,10 +2,12 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Collapse from "../components/Collapse";
+import Gallery from "../components/Gallery";
 import Stars from "../components/Stars";
 
 const Lodging = () => {
   let { id } = useParams();
+  
 
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -14,13 +16,12 @@ const Lodging = () => {
 
   console.log("data", data);
   let rental = data.filter((rental) => rental.id === id);
-
   if (data.length === 0) {
     return <p>Chargement des data...</p>;
   }
   return (
     <div className="lodging">
-      <img className="lightbox" src={rental[0].pictures[0]} alt="" />
+     <Gallery rental={rental}/>
 
       <div className="title">
         <div className="title__title">
@@ -43,7 +44,8 @@ const Lodging = () => {
             </div>
           ))}
         </div>
-        <Stars nb-stars={rental[0].rating}/>
+        <Stars nbStars={Number(rental[0].rating)}/>
+        
       </section>
       <section className="description-equipment">
         
