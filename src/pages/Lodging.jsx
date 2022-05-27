@@ -7,7 +7,6 @@ import Stars from "../components/Stars";
 
 const Lodging = () => {
   let { id } = useParams();
-  
 
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -21,7 +20,7 @@ const Lodging = () => {
   }
   return (
     <div className="lodging">
-     <Gallery rental={rental}/>
+      <Gallery rental={rental} />
 
       <div className="title">
         <div className="title__title">
@@ -35,8 +34,8 @@ const Lodging = () => {
             alt="photo de profil de l'hébergeur"
           />
         </div>
-      </div>
-      <section className="tags-rating">
+      
+     
         <div className="tags">
           {rental[0].tags.map((tag) => (
             <div key={tag} className="tag">
@@ -44,19 +43,31 @@ const Lodging = () => {
             </div>
           ))}
         </div>
-        <Stars nbStars={Number(rental[0].rating)}/>
-        
-      </section>
-      <section className="description-equipment">
-        
-        <Collapse title="Description" text={<p>{rental[0].description}</p>}/>
-        
-        <Collapse title="Équipements" text={<ul>
+
+        <div className="stars-container">
+        <Stars nbStars={Number(rental[0].rating)} />
+        </div>
+      </div>
+      
+
+
+
+
+
+      <div className="description-equipment">
+        <Collapse title="Description" text={<p>{rental[0].description}</p>} />
+
+        <Collapse
+          title="Équipements"
+          text={
+            <ul>
               {rental[0].equipments.map((equipment) => (
                 <li key={equipment}>{equipment}</li>
               ))}
-            </ul>}/>
-      </section>
+            </ul>
+          }
+        />
+      </div>
     </div>
   );
 };

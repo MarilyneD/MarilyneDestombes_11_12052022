@@ -1,7 +1,6 @@
 .stars{display : flex;position :relative; flex-direction: row;}
 
 
+@media screen and (max-width: 920px) {.stars{img{height:24px;}}}
 
-@media screen and (max-width: 600px) {.stars{top: 50px;left :calc(-100% + 142px);
-
-img{height:24px;}}}
+@media screen and (max-width: 600px) {.stars{img{height:20px;}}}

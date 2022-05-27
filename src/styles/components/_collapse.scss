@@ -8,7 +8,7 @@
     align-items: center;
     width: 100%;
     height: 48px;
-    font-size: 1.5rem;
+    font-size: 22px;
     color: white;
     background-color: $color-1;
     border-radius: 10px;
@@ -64,7 +64,7 @@
     li {
       line-height: 1.7rem;
       font-family: $font-1;
-      font-size: 24px;
+      font-size: 20px;
     }
   }
 
@@ -92,7 +92,6 @@
 
 @media screen and (max-width: 600px) {.collapse__title{height: 36px; font-size:16px ;}
 
-.collapse__title::after{height: 36px;}
-.collapse__content {max-height: 36px;padding-top: 10px;}}
+.collapse__title::after{height: 30px;}
+.collapse__content {max-height: 36px;padding-top: 8px;p,li{font-size:14px ;} }}
 
-//.collapse--expanded .footer{position : absolute; bottom: 209px;}
