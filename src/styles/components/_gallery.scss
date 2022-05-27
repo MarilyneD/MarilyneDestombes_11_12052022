@@ -1,21 +1,21 @@
 .gallery {
     height: 415px;
-  display: grid; 
-  grid-template-columns: 5fr 10fr 100fr 10fr 5fr; 
-  grid-template-rows: 10fr 4fr 10fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    ". . . . ."
-    ". . . . ."
-    ". . . . ."; 
+    display: grid;
+    grid-template-columns: 5fr 10fr 100fr 10fr 5fr;
+    grid-template-rows: 10fr 4fr 10fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . . . ."
+        ". . . . ."
+        ". . . . .";
 
 
     img {
-    
-  grid-column-start: 1;
-  grid-column-end: 6;
-  grid-row-start: 1;
-  grid-row-end: 4;
+
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 4;
         object-fit: cover;
         border-radius: 25px;
         height: 415px;
@@ -23,7 +23,7 @@
     }
 
     .arrows {
-       
+
         height: 80px;
         width: 48px;
         align-self: center;
@@ -40,12 +40,26 @@
 
     }
 
-    .next {grid-column-start: 4;
+    .next {
+        grid-column-start: 4;
         grid-column-end: 5;
         grid-row-start: 2;
         grid-row-end: 3;
         justify-self: end;
 
+
+    }
+
+    .position {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        justify-self: center;
+        align-self: flex-end;
+        padding-bottom: 30px;
+        color: #fff;
+        font-size: 20px;
 
     }
 
@@ -58,52 +72,64 @@
 
 @media screen and (max-width: 1240px) {
 
-    .gallery {.arrows {
-       
-        height: 55px;
-        width: 42px;
-           }
+    .gallery {
+        .arrows {
+
+            height: 55px;
+            width: 42px;
+        }
 
 
-    }}
+    }
+}
 
 
 
 
 @media screen and (max-width: 920px) {
 
-    .gallery {height : 310px;
-               img {
-            height : 310px;
+    .gallery {
+        height: 310px;
+
+        img {
+            height: 310px;
             border-radius: 10px;
         }
+
         .arrows {
-       
+
             height: 40px;
             width: 24px;
-               }
+        }
     }
 }
 
-
-
 @media screen and (max-width: 700px) {
 
-    .gallery {height : 250px;
-               img {
-            height : 250px;
+    .gallery {
+        height: 250px;
+
+        img {
+            height: 250px;
         }
     }
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
 
-    .gallery {.arrows {
-       
-        height: 30px;
-        width: 20px;
-           }
+    .gallery {
+        .arrows {
+
+            height: 30px;
+            width: 20px;
+        }
+
+        .position {
+            font-size: 14px;
+            padding-bottom: 15px;
+        }
 
 
-    }}
+    }
+}

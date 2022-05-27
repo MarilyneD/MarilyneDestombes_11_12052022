@@ -42,6 +42,7 @@ const Gallery = ({ rental }) => {
         src="../img/next.svg"
         alt="photo suivante"
       />
+      <div className="position">{counter+1}/{rental[0].pictures.length}</div>
     </section>
   );
 };

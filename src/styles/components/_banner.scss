@@ -31,8 +31,20 @@
 
 
 
-@media screen and (max-width: 1240px) {#bannerHome,#bannerAbout{height: 180px;padding: 0 28px 0 28px;border-radius: 10px; h1{font-size: 38px;} }}
-@media screen and (max-width: 840px) {#bannerHome,#bannerAbout{height: 160px;padding: 0 28px 0 28px;border-radius: 10px; h1{font-size: 32px;} }}
-@media screen and (max-width: 700px) {#bannerHome,#bannerAbout{height: 111px; h1{font-size: 24px;} }}
-@media screen and (max-width: 500px) {#bannerHome,#bannerAbout{height: 111px; h1{font-size: 20px;} }}
-@media screen and (max-width: 400px) {#bannerHome,#bannerAbout{height: 105px; h1{font-size: 17px;} }}
+@media screen and (max-width: 1240px) {#bannerHome{height: 180px;padding: 0 28px 0 28px;border-radius: 10px; h1{font-size: 38px;} }
+#bannerAbout{padding: 0 28px 0 28px;border-radius: 10px;background-position: 0px 0px; h1{font-size: 38px;} }
+}
+@media screen and (max-width: 840px) {#bannerHome{height: 160px;padding: 0 28px 0 28px;border-radius: 10px; h1{font-size: 32px;} }
+#bannerAbout{padding: 0 28px 0 28px;border-radius: 10px; h1{font-size: 32px;} }
+
+}
+
+@media screen and (max-width: 700px) {#bannerHome{height: 111px; h1{font-size: 24px;} }
+#bannerAbout{ h1{font-size: 24px;} }
+}
+@media screen and (max-width: 500px) {#bannerHome{height: 111px; h1{font-size: 20px;} }
+#bannerAbout{ h1{font-size: 20px;} }
+}
+@media screen and (max-width: 400px) {#bannerHome{height: 105px; h1{font-size: 17px;} }
+#bannerAbout{ h1{font-size: 17px;} }
+}

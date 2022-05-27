@@ -90,8 +90,8 @@
 @media screen and (max-width: 920px) {.collapse__title{ font-size:20px ;}}
 
 
-@media screen and (max-width: 600px) {.collapse__title{height: 36px; font-size:16px ;}
+@media screen and (max-width: 600px) {.collapse__title{height: 36px; font-size:16px ; &::after {height: 20px;}   }
 
-.collapse__title::after{height: 30px;}
+
 .collapse__content {max-height: 36px;padding-top: 8px;p,li{font-size:14px ;} }}
 
