@@ -7,22 +7,23 @@ import Stars from "../components/Stars";
 
 const Lodging = () => {
   let { id } = useParams();
-  let navigate =useNavigate();
+  let navigate = useNavigate();
   const [data, setData] = useState([]);
   useEffect(() => {
     axios.get("../../data/logements.json").then((res) => setData(res.data));
-   
   }, []);
 
   console.log("data", data);
-  console.log("data id", data.map((rental)=>rental.id));
+  console.log(
+    "data id",
+    data.map((rental) => rental.id)
+  );
 
-  if (data.length > 0){
-    
-  if (!data.map((rental)=>rental.id).includes(id)){navigate("/Notfound")} ;
-  
-
-}
+  if (data.length > 0) {
+    if (!data.map((rental) => rental.id).includes(id)) {
+      navigate("/Notfound");
+    }
+  }
 
   let rental = data.filter((rental) => rental.id === id);
   if (data.length === 0) {
@@ -44,8 +45,7 @@ const Lodging = () => {
             alt="photo de profil de l'hébergeur"
           />
         </div>
-      
-     
+
         <div className="tags">
           {rental[0].tags.map((tag) => (
             <div key={tag} className="tag">
@@ -55,14 +55,9 @@ const Lodging = () => {
         </div>
 
         <div className="stars-container">
-        <Stars nbStars={Number(rental[0].rating)} />
+          <Stars nbStars={Number(rental[0].rating)} />
         </div>
       </div>
-      
-
-
-
-
 
       <div className="description-equipment">
         <Collapse title="Description" text={<p>{rental[0].description}</p>} />
