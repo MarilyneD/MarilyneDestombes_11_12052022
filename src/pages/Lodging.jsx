@@ -13,20 +13,16 @@ const Lodging = () => {
     axios.get("../../data/logements.json").then((res) => setData(res.data));
   }, []);
 
-  console.log("data", data);
-  console.log(
-    "data id",
-    data.map((rental) => rental.id)
-  );
-
-  if (data.length > 0) {
-    if (!data.map((rental) => rental.id).includes(id)) {
-      navigate("/Notfound");
+  useEffect(() => {
+    if (data.length > 0) {
+      if (!data.map((rental) => rental.id).includes(id)) {
+        navigate("/Notfound");
+      }
     }
-  }
+  }, [data]);
 
   let rental = data.filter((rental) => rental.id === id);
-  if (data.length === 0) {
+  if (rental.length === 0) {
     return <p>Chargement des data...</p>;
   }
   return (
