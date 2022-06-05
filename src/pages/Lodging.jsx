@@ -22,6 +22,7 @@ const Lodging = () => {
   }, [data]);
 
   let rental = data.filter((rental) => rental.id === id);
+
   if (rental.length === 0) {
     return <p>Chargement des data...</p>;
   }
@@ -38,7 +39,7 @@ const Lodging = () => {
           <div className="title__host__name">{rental[0].host.name}</div>
           <img
             src={rental[0].host.picture}
-            alt="photo de profil de l'hébergeur"
+            alt="profil de l'hébergeur"
           />
         </div>
 
